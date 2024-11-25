@@ -72,7 +72,7 @@ The `smbmnt.sh` script is designed to mount Samba shares by reading configuratio
 ### Basic Command
 
 ```bash
-./smbmnt.sh [server_name]
+smbmnt [server_name]
 ```
 
 Replace `[server_name]` with the name of the server as defined in the configuration file.
@@ -83,14 +83,14 @@ Replace `[server_name]` with the name of the server as defined in the configurat
   Displays usage instructions and exits.
 
   ```bash
-  ./smbmnt.sh --help
+  smbmnt --help
   ```
 
 - **-v, --version**  
   Displays the version information of the script.
 
   ```bash
-  ./smbmnt.sh --version
+  smbmnt --version
   ```
 
 ---
@@ -104,7 +104,7 @@ The configuration is stored in the `config.yaml` file located in `~/.config/smbm
 ```yaml
 servers:
   myserver:
-    ip: '192.168.1.30'   # The IP address of the Samba server
+    ip: '192.168.1.30'    # The IP address of the Samba server
     share: 'myfiles'      # The shared folder name
     user: 'superuser'     # The username to authenticate with the Samba server
     password: ''          # The password (optional, can be left empty for security reasons)
@@ -175,13 +175,13 @@ servers:
 To mount a share from **myserver**, run:
 
 ```bash
-./smbmnt.sh myserver
+smbmnt myserver
 ```
 
 To mount a share from **another_server**, run:
 
 ```bash
-./smbmnt.sh another_server
+smbmnt another_server
 ```
 
 The script will look up the server name in the `config.yaml` file, read the associated configuration, and proceed with mounting the share.
@@ -223,7 +223,7 @@ If the configuration option `cd` is set to `true`, the script will automatically
 ### **Example:**
 
 ```bash
-./smbmnt.sh myserver
+smbmnt myserver
 ```
 
 After the mount operation completes, if `cd` is set to `true`, you will be automatically switched to the `/mnt/smbmnt` directory. You can then use the mounted files as if they were local files.
