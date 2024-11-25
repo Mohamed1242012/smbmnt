@@ -54,12 +54,13 @@ To use the `smbmnt` script, you need to install `yq` (YAML processor) and ensure
 4. **Permissions** - Ensure you have the necessary permissions to mount and unmount network shares.
 
 
-### Git clone
+### Install
 
 ```bash
 git clone https://github.com/mohamed1242012/smbmnt.git
-cd smbmnt.git
-./install.sh
+cd smbmnt
+sudo cp smbmnt /bin
+sudo cp config.yaml ~/.config/smbmnt/config.yaml
 ```
 
 ---
