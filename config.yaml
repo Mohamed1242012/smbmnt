@@ -1,0 +1,16 @@
+servers:
+  myserver:
+    ip: '192.168.1.30'    # The IP address of the Samba server
+    share: 'myfiles'      # The shared folder name
+    user: 'superuser'     # The username to authenticate with the Samba server
+    password: ''          # The password (optional, can be left empty for security reasons)
+    version: '2.0'        # Samba version (don't edit unless necessary)
+    mnt: '/mnt/smbmnt'    # The local mount point
+    dmp: 'true'           # Delete mount point after unmounting (true/false)
+    uim: 'true'           # Automatically unmount if mounted (true/false)
+    cd: 'true'            # Change to the mount point directory after mounting (true/false)
+    permissions:          # File and directory permissions (advanced)
+      file_mode: '0777'
+      dir_mode: '0777'
+      uid: '1000'
+      gid: '1000'
