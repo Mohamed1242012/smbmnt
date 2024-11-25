@@ -51,9 +51,9 @@ version() {
 
 # Check if any arguments are provided
 if [ $# -eq 0 ]; then
-  echo "Unknown argument. Use -u, --usage, or --help for usage information."
-  exit 1
+  usage
 fi
+
 
 # Handle command-line options for usage and version
 case "$1" in

@@ -1,3 +1,5 @@
 .vscode/
 
 aur/
+
+*.sh.x.c
