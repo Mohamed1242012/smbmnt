@@ -3,3 +3,5 @@
 aur/
 
 *.sh.x.c
+
+PKGBUILD

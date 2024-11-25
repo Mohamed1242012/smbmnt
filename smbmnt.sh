@@ -77,7 +77,7 @@ fi
 
 # Extract configuration values for the specified server from the YAML file
 SHARE=$(yq -r ".servers.$1.share" ~/.config/smbmnt/config.yaml)
-IP=$(yq -r ".servers.$1.ip" ~/.config/smbmnt/config.yaml)
+IP="//$(yq -r ".servers.$1.ip" ~/.config/smbmnt/config.yaml)/$SHARE"
 USER=$(yq -r ".servers.$1.user" ~/.config/smbmnt/config.yaml)
 VERSION=$(yq -r ".servers.$1.version" ~/.config/smbmnt/config.yaml)
 MOUNT_POINT=$(yq -r ".servers.$1.mnt" ~/.config/smbmnt/config.yaml)
