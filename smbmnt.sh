@@ -104,7 +104,7 @@ uim=$(yq -r ".servers.$1.uim" ~/.config/smbmnt/config.yaml)
 cd=$(yq -r ".servers.$1.cd" ~/.config/smbmnt/config.yaml)
 
 # Check again if server exists in the config file (redundant, probably a copy-paste error)
-if ! yq -e ".servers.$1" config.yaml > /dev/null 2>&1; then
+if ! yq -e ".servers.$1" ~/.config/smbmnt/config.yaml > /dev/null 2>&1; then
   echo "'$1' not found in the config file."
   echo "--help for more information"
   exit 1
